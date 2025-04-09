@@ -24,7 +24,9 @@ int main(const int argc, const char** argv) {
             attributes = getAttributes();
             tmplate = setTemplate(attributes);
         } else if (input == "generate sql") {
-            sqlData = generateSQL(attributes, tmplate, openFile(getInput("Enter file path:")));
+            sqlData = generateSQL(attributes,
+                                  tmplate,
+                                  openFile(getInput("Enter file path:")));
             printVect(sqlData);
         }
 	}

@@ -28,9 +28,12 @@ string getInput(const string& prompt) {
 
 void printHelp() {
     cout << "Help" << '\n' << '\n'
-         << setw(30) << left << "set template" << "Sets the template for the SQL generation." << '\n'
-         << setw(30) << left << "generate sql" << "Generates the SQL data script from template." << '\n'
-         << setw(30) << left << "exit" << "Exits the program." << '\n';
+         << setw(30) << left << "set template"
+         << "Sets the template for the SQL generation." << '\n'
+         << setw(30) << left << "generate sql"
+         << "Generates the SQL data script from template." << '\n'
+         << setw(30) << left << "exit"
+         << "Exits the program." << '\n';
 }
 
 void printVect(const vector<string>& vect) {

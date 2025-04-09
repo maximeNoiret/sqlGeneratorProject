@@ -32,7 +32,12 @@ vector<char> getTypes(const vector<string>& attributes) {
     char type;
     for (const string& attribute : attributes) {
         for (;;) {
-            cout << "Enter domain for " << (attribute == *attributes.begin() ? "PRIMARY KEY " : "") << "\"" << attribute << "\" (c=string, n=number, h=hierarchy): ";
+            cout << "Enter domain for "
+                 << (attribute == *attributes.begin()
+                         ? "PRIMARY KEY "
+                         : "")
+                 << "\"" << attribute
+                 << "\" (c=string, n=number, h=hierarchy): ";
 
             getline(cin, bruh);
             type = bruh[0];
