@@ -1,0 +1,22 @@
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+vector<string> openFile(const string &filePath) {
+    vector<string> fileData;
+    fileData.push_back("null");  // for getParent (null value)
+
+    ifstream file(filePath);
+    if (!file) {
+        cerr << "Incorrect file." << '\n'
+             << "Make sure the file exists and the path is correct.";
+    }
+    for (string line;getline(file, line);) {
+        if (line.substr(0, 2) == "//" || line.empty()) continue;
+        fileData.push_back(line);
+    }
+    return fileData;
+}
