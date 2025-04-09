@@ -13,7 +13,7 @@ using namespace std;
 // Genuinely horrifying.
 vector<string> getAttributes() {
     vector<string> attributes;
-    cout << "Enter attributes (:q to quit):" << endl;
+    cout << "Enter attributes:" << endl;
     string attrs;
     getline(cin, attrs);
     string attr;
