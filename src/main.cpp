@@ -28,6 +28,8 @@ int main(const int argc, const char** argv) {
                                   tmplate,
                                   openFile(getInput("Enter file path:")));
             printVect(sqlData);
+            cout << "Enter output file name: ";
+            getline(cin, input);
         }
 	}
 	return 0;

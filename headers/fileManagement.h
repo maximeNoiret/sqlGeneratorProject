@@ -11,4 +11,11 @@
  */
 std::vector<std::string> openFile(const std::string &filePath);
 
+/**
+ * @brief Write data into a file.
+ * @param [in] filePath : The path to the file into which to write.
+ * @param [in] data : The data to write, one element per line.
+ */
+void writeFile(const std::string& filePath, const std::vector<std::string>& data);
+
 #endif // FILEMANAGEMENT_H
