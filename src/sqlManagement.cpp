@@ -33,7 +33,7 @@ vector<char> getTypes(const vector<string>& attributes) {
     for (const string& attribute : attributes) {
         for (;;) {
             cout << "Enter domain for " << (attribute == *attributes.begin() ? "PRIMARY KEY " : "") << "\"" << attribute << "\" (c=string, n=number, h=hierarchy): ";
-            // cursed ass shit
+
             getline(cin, bruh);
             type = bruh[0];
             if (type == 'c' || type == 'n' || type == 'h')
