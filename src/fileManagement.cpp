@@ -14,6 +14,7 @@ vector<string> openFile(const string &filePath) {
     if (!file) {
         cerr << "Incorrect file." << '\n'
              << "Make sure the file exists and the path is correct.";
+        exit(1);
     }
     for (string line;getline(file, line);) {
         if (line.substr(0, 2) == "//" || line.empty()) continue;

@@ -28,9 +28,11 @@ int main(const int argc, const char** argv) {
                                   tmplate,
                                   openFile(getInput("Enter file path:")));
             printVect(sqlData);
-            cout << "Enter output file name: ";
+            cout << "Enter output file name (:q to not write to file): ";
             getline(cin, input);
-            writeFile(input, sqlData);
+            if (input != ":q")
+                writeFile(input, sqlData);
+            input = "";
         }
 	}
 	return 0;
