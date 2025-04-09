@@ -23,7 +23,7 @@ vector<string> openFile(const string &filePath) {
 }
 
 void writeFile(const string& filePath, const vector<string>& data) {
-    ifstream file(filePath);
+    ofstream file(filePath);
     if (!file) {
         cerr << "Incorrect file." << '\n'
              << "Make sure the file exists and the path is correct.";

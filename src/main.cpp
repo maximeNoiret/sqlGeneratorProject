@@ -30,6 +30,7 @@ int main(const int argc, const char** argv) {
             printVect(sqlData);
             cout << "Enter output file name: ";
             getline(cin, input);
+            writeFile(input, sqlData);
         }
 	}
 	return 0;
